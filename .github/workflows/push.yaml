@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v2
+        name: give rights to choise.sh
+        run: chmod 755 ./choice.sh
       - name: Run the choise script
         run: ./choise.sh
       - name: Login to Docker Hub
